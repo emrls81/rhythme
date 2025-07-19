@@ -17,6 +17,15 @@
   gap: 2rem;
 }
 
+.feed input[type="text"], .feed textarea {
+  color: #222;
+  background: #fff;
+}
+.feed input[type="text"]::placeholder, .feed textarea::placeholder {
+  color: #888;
+  opacity: 1;
+}
+
 
 .home-logo {
   width: 120px;

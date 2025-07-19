@@ -34,7 +34,7 @@ export const updatePostController = async (req, res) => {
 
 export const deletePostController = async (req, res) => {
     try {
-        const deletedPost = await deletePost(req.params, req.body);
+        const deletedPost = await deletePost(req.params, { userId: req.params.userId });
         res.status(200).json({
             deletedPost,
             message: "Post deleted successfully",
@@ -82,7 +82,7 @@ export const getPostController = async (req, res) => {
 
 export const getTimelinePostsController = async (req, res) => {
     try {
-        const timeLinePosts = await getTimelinePosts(req.body);
+        const timeLinePosts = await getTimelinePosts({ userId: req.params.userId });
         res.status(200).json({
             timeLinePosts,
             message: "Timeline posts fetch Succesfully"
