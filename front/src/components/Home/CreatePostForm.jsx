@@ -49,7 +49,7 @@ export default function CreatePostForm({ user, onPostCreated }) {
     const file = e.target.files?.[0];
     if (!file) return;
     // Validar tipo simple
-    if (!file.type || !file.type.startsWith('image/')) {
+    if (!file.type.startsWith('image/')) {
       setCreateError('Solo se permiten imágenes');
       return;
     }
