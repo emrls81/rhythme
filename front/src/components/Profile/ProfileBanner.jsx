@@ -95,7 +95,17 @@ export default function ProfileBanner({
                                         profileUser.relationship === 3 ? "Casado/a" : ""
                             }</span>
                         )}
-                        <MusicPreferencesChips musicPreferences={profileUser.musicPreferences} />
+                                                {Array.isArray(profileUser.musicPreferences) && profileUser.musicPreferences.length > 0 && (
+                                                    <span className="genre-chips">
+                                                        🎵
+                                                        {profileUser.musicPreferences.slice(0, 6).map((g) => (
+                                                            <span key={g} className="genre-chip">{g}</span>
+                                                        ))}
+                                                        {profileUser.musicPreferences.length > 6 && (
+                                                            <span style={{ opacity: 0.9 }}>+{profileUser.musicPreferences.length - 6}</span>
+                                                        )}
+                                                    </span>
+                                                )}
                     </div>
 
                     {/* Estadísticas */}
