@@ -500,13 +500,13 @@ graph LR
     end
 
     subgraph "Backend Routes"
-        AuthRoutes[/api/v1/auth/*]
-        UserRoutes[/api/v1/users/*]
-        PostRoutes[/api/v1/posts/*]
-        SpotifyRoutes[/api/v1/spotify/*]
-        MessageRoutes[/api/v1/messages/*]
-        ConversationRoutes[/api/v1/conversations/*]
-        NotificationRoutes[/api/v1/notifications/*]
+        AuthRoutes[/api/v1/auth/]
+        UserRoutes[/api/v1/users/]
+        PostRoutes[/api/v1/posts/]
+        SpotifyRoutes[/api/v1/spotify/]
+        MessageRoutes[/api/v1/messages/]
+        ConversationRoutes[/api/v1/conversations/]
+        NotificationRoutes[/api/v1/notifications/]
     end
 
     subgraph "Controllers"
